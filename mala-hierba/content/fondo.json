@@ -1,0 +1,8 @@
+{
+  "titulo": "Un tercio para el gremio",
+  "desc1": "El mercado paga $30,000 MXN por un microdrama vertical. Nosotros cobramos $45,000 — la diferencia de $15,000 va directo al Fondo Mala Hierba, un capital colectivo que financia proyectos propios de nuestros escritores.",
+  "desc2": "No es altruismo. Es un modelo sostenible para que quienes escriben bien también puedan hacer lo que quieren escribir.",
+  "precio_mercado": 30000,
+  "precio_mh": 45000,
+  "porcentaje": "33%"
+}

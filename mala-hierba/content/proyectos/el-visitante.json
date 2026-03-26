@@ -1,0 +1,13 @@
+{
+  "titulo": "El Visitante",
+  "slug": "el-visitante",
+  "escritor": "Karen Espinal",
+  "formato": "vertical",
+  "imagen": "",
+  "sinopsis_corta": "Un extraño llega a una casa y lo transforma todo — los deseos, los roles, el orden. Inspirada libremente en Teorema de Pasolini, llevada al microdrama vertical mexicano.",
+  "sinopsis_larga": "Un extraño aparece en la vida de una familia aparentemente estable y lo transforma todo desde adentro: los deseos, los roles, el orden invisible. Inspirada libremente en Teorema de Pasolini y adaptada al ritmo y la sensibilidad del microdrama vertical mexicano contemporáneo.",
+  "precio": 45000,
+  "destacado": false,
+  "orden": 3,
+  "color_fondo": "red"
+}

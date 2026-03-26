@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "es"
+
+collections:
+  - name: "configuracion"
+    label: "⚙️ Configuración general"
+    files:
+      - name: "site"
+        label: "Datos del sitio"
+        file: "content/site.json"
+        fields:
+          - { label: "Nombre del workshop", name: "nombre", widget: "string", default: "Mala Hierba Workshop" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "nunca muere." }
+          - { label: "Descripción corta (hero)", name: "descripcion_hero", widget: "text" }
+          - { label: "Manifiesto (cita)", name: "cita_manifiesto", widget: "string" }
+          - { label: "Manifiesto (párrafo 1)", name: "manifiesto_p1", widget: "text" }
+          - { label: "Manifiesto (párrafo 2)", name: "manifiesto_p2", widget: "text" }
+          - { label: "Correo de contacto", name: "email", widget: "string" }
+          - { label: "Ciudad", name: "ciudad", widget: "string", default: "Ciudad de México" }
+          - { label: "Agencia (LOF)", name: "agencia", widget: "string", default: "Leap of Faith (LOF)" }
+
+  - name: "escritores"
+    label: "✍️ Escritores"
+    folder: "content/escritores"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: "nombre"
+    fields:
+      - { label: "Nombre completo", name: "nombre", widget: "string" }
+      - { label: "Slug (sin espacios, ej: aldo-hernandez)", name: "slug", widget: "string" }
+      - { label: "Rol / Especialidad", name: "rol", widget: "string" }
+      - { label: "Iniciales (2 letras)", name: "iniciales", widget: "string" }
+      - { label: "Foto de perfil", name: "foto", widget: "image", required: false, hint: "Recomendado: cuadrada, mínimo 400x400px" }
+      - { label: "Biografía", name: "bio", widget: "text" }
+      - { label: "Orden en la página", name: "orden", widget: "number", default: 1 }
+
+  - name: "proyectos"
+    label: "🎬 Proyectos del catálogo"
+    folder: "content/proyectos"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: "titulo"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Slug (sin espacios, ej: tarotista-cancelada)", name: "slug", widget: "string" }
+      - { label: "Escritor(es)", name: "escritor", widget: "string" }
+      - label: "Formato"
+        name: "formato"
+        widget: "select"
+        options:
+          - { label: "Microdrama Vertical", value: "vertical" }
+          - { label: "Serie Vertical", value: "serie" }
+          - { label: "Cortometraje", value: "corto" }
+          - { label: "Largometraje", value: "largo" }
+      - { label: "Imagen de portada", name: "imagen", widget: "image", required: false, hint: "Recomendado: 1200x800px, paisaje" }
+      - { label: "Sinopsis corta (para la tarjeta)", name: "sinopsis_corta", widget: "text" }
+      - { label: "Sinopsis completa (para el modal)", name: "sinopsis_larga", widget: "text" }
+      - { label: "Precio base (MXN)", name: "precio", widget: "number", default: 45000 }
+      - { label: "Destacado (ocupa doble ancho)", name: "destacado", widget: "boolean", default: false }
+      - { label: "Orden en catálogo", name: "orden", widget: "number", default: 1 }
+      - label: "Color de fondo (si no hay imagen)"
+        name: "color_fondo"
+        widget: "select"
+        default: "purple"
+        options:
+          - { label: "Morado oscuro", value: "purple" }
+          - { label: "Verde oscuro", value: "green" }
+          - { label: "Rojo oscuro", value: "red" }
+          - { label: "Azul oscuro", value: "blue" }
+
+  - name: "fondo"
+    label: "💰 Fondo Mala Hierba"
+    files:
+      - name: "fondo"
+        label: "Datos del Fondo"
+        file: "content/fondo.json"
+        fields:
+          - { label: "Título de sección", name: "titulo", widget: "string", default: "Un tercio para el gremio" }
+          - { label: "Descripción (párrafo 1)", name: "desc1", widget: "text" }
+          - { label: "Descripción (párrafo 2)", name: "desc2", widget: "text" }
+          - { label: "Precio de mercado (MXN)", name: "precio_mercado", widget: "number", default: 30000 }
+          - { label: "Precio Mala Hierba (MXN)", name: "precio_mh", widget: "number", default: 45000 }
+          - { label: "Porcentaje al fondo", name: "porcentaje", widget: "string", default: "33%" }

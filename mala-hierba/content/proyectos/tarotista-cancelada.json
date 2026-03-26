@@ -1,0 +1,13 @@
+{
+  "titulo": "Tarotista Cancelada",
+  "slug": "tarotista-cancelada",
+  "escritor": "Lex Bravo",
+  "formato": "vertical",
+  "imagen": "",
+  "sinopsis_corta": "Mariana finge ser tarotista y se vuelve viral diciéndole a sus clientes lo que quieren escuchar. Cuando se obsesiona con Rafa, manipula sus lecturas para conquistarlo. Pero una misteriosa clienta descubre el fraude.",
+  "sinopsis_larga": "Mariana finge ser tarotista y se vuelve viral diciéndole a sus clientes lo que quieren escuchar. Cuando se obsesiona con Rafa, un cliente recién separado, manipula sus lecturas para conquistarlo. Pero una misteriosa nueva clienta descubre el fraude y amenaza con exponerla. ¿Confesará o seguirá mintiendo hasta convertirse en Tarotista Cancelada?",
+  "precio": 45000,
+  "destacado": true,
+  "orden": 1,
+  "color_fondo": "purple"
+}

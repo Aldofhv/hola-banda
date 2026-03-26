@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mala Hierba — Workshop de Guion Vertical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Mala Hierba</a>
+  <ul class="nav-links">
+    <li><a href="#escritores">Escritores</a></li>
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#fondo">El Fondo</a></li>
+    <li><a href="#contacto">Cotizar</a></li>
+  </ul>
+  <button class="nav-menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Anti-Taller de Guion Vertical — México</p>
+    <h1 class="hero-title">
+      Mala<br>
+      <span class="italic">Hierba</span>
+    </h1>
+    <p class="hero-subtitle" id="hero-tagline">nunca muere.</p>
+    <p class="hero-desc" id="hero-desc">
+      Un pool de guionistas con miradas no hegemónicas y voces fuera del centro. Conocemos las reglas de la industria — y sabemos exactamente cuándo romperlas.
+    </p>
+    <div class="hero-cta">
+      <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+      <a href="#contacto" class="btn-secondary">Cotizar Proyecto</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual"></div>
+    <div class="hero-number">MH</div>
+    <div class="hero-stat">
+      <span class="num" id="hero-count">3</span>
+      <span class="label">Proyectos disponibles</span>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Anti-Taller de Guion</span><span class="sep">◆</span>
+    <span>Microdrama</span><span class="sep">◆</span>
+    <span>Series</span><span class="sep">◆</span>
+    <span>Largometraje</span><span class="sep">◆</span>
+    <span>Miradas no hegemónicas</span><span class="sep">◆</span>
+    <span>Mala Hierba Workshop</span><span class="sep">◆</span>
+    <span>Anti-Taller de Guion</span><span class="sep">◆</span>
+    <span>Microdrama</span><span class="sep">◆</span>
+    <span>Series</span><span class="sep">◆</span>
+    <span>Largometraje</span><span class="sep">◆</span>
+    <span>Miradas no hegemónicas</span><span class="sep">◆</span>
+    <span>Mala Hierba Workshop</span><span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- MANIFIESTO -->
+<div class="manifesto-section">
+  <div class="manifesto-inner">
+    <blockquote class="manifesto-quote" id="manifiesto-cita">
+      "Primero aprendes las reglas. Luego decides cuáles romper."
+    </blockquote>
+    <div class="manifesto-body">
+      <p id="manifiesto-p1">Mala Hierba es un <strong>anti-taller de guion vertical</strong>. Lo anti no es pose — es método. Reunimos escritores que dominan la estructura, el formato y las expectativas de la industria, y desde ahí proponen algo que la industria no había visto venir.</p>
+      <p id="manifiesto-p2">Nuestro catálogo tiene <strong>miradas no hegemónicas</strong>: voces fuera del centro geográfico y cultural, perspectivas que no repiten las mismas historias. Listos para cotizar, listos para producir — con el potencial de convertirse en el contenido que la audiencia esperaba sin saberlo.</p>
+      <p>Operamos bajo el paraguas de <strong id="agencia-nombre">Leap of Faith (LOF)</strong>, agencia de contenido y design thinking. Cada proyecto financia el siguiente.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ESCRITORES -->
+<section id="escritores">
+  <div class="section-label">El equipo</div>
+  <h2 class="section-title">Los que <em>escriben</em></h2>
+  <div class="writers-grid" id="writers-grid">
+    <!-- Cargado dinámicamente -->
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<div class="catalog-section" id="catalogo">
+  <div class="catalog-inner">
+    <div class="catalog-header">
+      <div>
+        <div class="section-label">Proyectos disponibles</div>
+        <h2 class="section-title">El <em>catálogo</em></h2>
+      </div>
+      <div class="catalog-filter">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filterProjects('vertical', this)">Vertical</button>
+        <button class="filter-btn" onclick="filterProjects('serie', this)">Serie</button>
+        <button class="filter-btn" onclick="filterProjects('corto', this)">Corto</button>
+        <button class="filter-btn" onclick="filterProjects('largo', this)">Largo</button>
+      </div>
+    </div>
+    <div class="projects-grid" id="projects-grid">
+      <!-- Cargado dinámicamente -->
+    </div>
+  </div>
+</div>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="section-label">Cómo funciona</div>
+  <h2 class="section-title">Del guion a la <em>pantalla</em></h2>
+  <div class="steps-list">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Eliges el proyecto</div>
+      <p class="step-desc">Exploras el catálogo y solicitas cotización según el formato — vertical, serie, largo o corto. Cada proyecto tiene su propio rango.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Cotización &amp; pago</div>
+      <p class="step-desc">Te enviamos propuesta detallada con alcance, entregables y cronograma. Confirmado, el pago se procesa vía Stripe de forma segura.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Reunión de arranque</div>
+      <p class="step-desc">Agendamos una llamada para alinear visión, plataforma destino, tono y particularidades del proyecto antes de arrancar escritura.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title">Entrega semanal</div>
+      <p class="step-desc">Cada semana recibes avances, ajustes y propuestas para revisión. El guion se construye en diálogo — no lo recibes solo al final.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FONDO COLECTIVO -->
+<div class="fondo-section" id="fondo">
+  <div class="fondo-inner">
+    <div>
+      <div class="section-label fondo-label">El modelo</div>
+      <h2 class="fondo-title" id="fondo-titulo">Un tercio para el gremio</h2>
+      <p class="fondo-desc" id="fondo-desc1">El mercado paga $30,000 MXN por un microdrama vertical. Nosotros cobramos $45,000 — la diferencia va directo al Fondo Mala Hierba.</p>
+      <p class="fondo-desc" id="fondo-desc2">No es altruismo. Es un modelo sostenible para que quienes escriben bien también puedan hacer lo que quieren escribir.</p>
+      <div class="fondo-numbers">
+        <div class="fondo-num">
+          <span class="big" id="fondo-porcentaje">33%</span>
+          <span class="small">Por proyecto al fondo</span>
+        </div>
+        <div class="fondo-num">
+          <span class="big" id="fondo-escritores-count">4</span>
+          <span class="small">Escritores en el pool</span>
+        </div>
+      </div>
+    </div>
+    <div class="fondo-visual">
+      <div class="fondo-card">
+        <div class="fondo-card-title">Desglose por proyecto</div>
+        <ul class="fondo-breakdown">
+          <li>Precio de mercado <span id="precio-mercado">$30,000</span></li>
+          <li>Fondo Mala Hierba <span id="precio-fondo">$15,000</span></li>
+          <li class="total">Precio Mala Hierba <span id="precio-mh">$45,000 MXN</span></li>
+        </ul>
+        <br>
+        <div class="fondo-nota">* Precios base para microdrama vertical.<br>Series, largometrajes y formatos especiales cotizados aparte.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div id="contacto">
+  <div class="contact-section">
+    <div>
+      <div class="section-label">Trabajemos</div>
+      <h2 class="section-title">Solicita tu <em>cotización</em></h2>
+      <br>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>Nombre completo</label>
+          <input type="text" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label>Productora / Estudio</label>
+          <input type="text" placeholder="Nombre de la empresa" required>
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="hola@estudio.com" required>
+        </div>
+        <div class="form-group">
+          <label>Tipo de proyecto</label>
+          <select required>
+            <option value="">Selecciona formato</option>
+            <option>Microdrama Vertical</option>
+            <option>Serie Vertical</option>
+            <option>Cortometraje</option>
+            <option>Largometraje</option>
+            <option>Proyecto del catálogo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Cuéntanos del proyecto</label>
+          <textarea placeholder="Género, plataforma destino, audiencia, urgencia..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;text-align:center;padding:1rem;">Enviar solicitud →</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <p class="contact-manifesto">
+        "No buscamos proyectos genéricos. Buscamos el estudio que entiende que la mala hierba es la que finalmente florece."
+      </p>
+      <div class="contact-detail">
+        <div class="dt">Workshop</div>
+        <div class="dd">Mala Hierba — <span id="contact-ciudad">Ciudad de México</span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="dt">Bajo el paraguas de</div>
+        <div class="dd" id="contact-agencia">Leap of Faith (LOF) — Content &amp; Design Thinking</div>
+      </div>
+      <div class="contact-detail">
+        <div class="dt">Proceso de entrega</div>
+        <div class="dd">Entregables semanales + reunión de arranque + revisiones incluidas</div>
+      </div>
+      <div class="contact-detail">
+        <div class="dt">Pago</div>
+        <div class="dd">Vía Stripe — cotización previa requerida</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Mala Hierba Workshop</div>
+  <div class="footer-copy">© 2025 Mala Hierba. Todos los derechos reservados.</div>
+  <div class="footer-lof">Una iniciativa de <a href="#" id="footer-lof">Leap of Faith (LOF)</a></div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" onclick="closeModalBtn()">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
